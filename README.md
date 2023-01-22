@@ -26,7 +26,8 @@ Note that each bit in this four-bit sequence toggles when the bit before it (the
 
 Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
 
-The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
+The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:[ilovepdf_pages-to-jpg (9).zip](https://github.com/Gopika-9266/Exp-7-Synchornous-counters-/files/10474892/ilovepdf_pages-to-jpg.9.zip)
+
 
  
  
