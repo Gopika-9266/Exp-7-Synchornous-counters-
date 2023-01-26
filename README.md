@@ -47,43 +47,81 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
+
+
+1.Create module projectname(input ,output) to start the verilog programming.
+
+2.create a if loop condition to increase the count in counter_up function.
+
+3.Similarly, create another loop for the down counter.
+
+4.End the verilog program using keyword endmodule.
+
+5.Get the timing diagram and RTL realization diagram for respective Counters.
 
 
 
-### PROGRAM 
-/*
+
+### PROGRAM:
+
+module uc(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up<=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
+
+
+
+module dc(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
+
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: Gopika.R 
+RegisterNumber:22009266 
 
 
 
+### RTL LOGIC UP COUNTER AND DOWN COUNTER:
+
+
+![Screenshot (68)](https://user-images.githubusercontent.com/122762773/214756142-a496ec5a-771f-4c76-a57d-85a0a28bf841.png)
+
+
+![Screenshot (70)](https://user-images.githubusercontent.com/122762773/214756354-b887abdc-758b-457d-a648-f56d3ae58871.png)
 
 
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+### TIMING DIGRAMS FOR COUNTER: 
+
+
+![Screenshot (69)](https://user-images.githubusercontent.com/122762773/214756979-bef84234-6662-47da-b81c-0ecd1a1083eb.png)
+
+
+![Screenshot (71)](https://user-images.githubusercontent.com/122762773/214756782-aa86cae3-8b26-4f4e-9b39-4a6d7a1cf644.png)
 
 
 
+### TRUTH TABLE:
+
+![table-5-6-2](https://user-images.githubusercontent.com/122762773/214756566-f74f26fc-40f0-4a73-b2a9-2dd1e6989898.gif)
 
 
 
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
+### RESULTS:
+      Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified. 
